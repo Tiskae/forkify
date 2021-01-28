@@ -119,10 +119,9 @@ const controlUploadRecipe = async function (data) {
   }
 };
 
-const newFeature = function() {
-  console.log("Welcome to the application");
-}
-
+const newFeature = function () {
+  console.log('Welcome to the application');
+};
 
 const init = function () {
   bookmarksView.addHandlerBookmark(controlBookmarks);
@@ -132,7 +131,7 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerBtn(controlPagination);
   addRecipeView.addHandlerUpload(controlUploadRecipe);
-  console.log('Hello');
+  console.log('Netlify should get this already');
 };
 
 init();
