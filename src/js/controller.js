@@ -8,8 +8,8 @@ import bookmarksView from './views/bookmarksView.js';
 import addRecipeView from './views/addRecipeView.js';
 import { MODAL_CLOSE_SEC } from './config.js';
 
-// import 'core-js/stable';
-// import 'regenerator-runtime/runtime';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 // const recipeContainer = document.querySelector('.recipe');
 
@@ -114,13 +114,8 @@ const controlUploadRecipe = async function (data) {
     // Change ID in the URL
     window.history.pushState(null, '', `#${model.state.recipe.id}`);
   } catch (err) {
-    console.log(err);
     addRecipeView.renderError(err);
   }
-};
-
-const newFeature = function () {
-  console.log('Welcome to the application');
 };
 
 const init = function () {
@@ -131,7 +126,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerBtn(controlPagination);
   addRecipeView.addHandlerUpload(controlUploadRecipe);
-  console.log('Netlify should get this already');
 };
 
 init();
